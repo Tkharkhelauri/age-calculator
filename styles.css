@@ -1,0 +1,14 @@
+:root {
+	--col-purple: #854dff;
+	--col-red: #ff5959;
+
+	--col-bg: #dcdcdc;
+	--col-black: #151515;
+	--col-white: #fff;
+
+	--ff-primary: 'Poppins';
+	--ff-fallback: sans-serif;
+
+	--rounded-xs: 0.4rem;
+	--rounded-sm: 1rem;
+}
