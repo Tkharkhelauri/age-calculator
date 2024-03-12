@@ -12,3 +12,28 @@
 	--rounded-xs: 0.4rem;
 	--rounded-sm: 1rem;
 }
+
+body {
+}
+.mainContainer {
+}
+.calcContainer {
+}
+.inputsContainer {
+}
+.inputBox {
+}
+#inputDay {
+}
+#inputMonth {
+}
+#inputFullYear {
+}
+.dayError {
+}
+.monthError {
+}
+.fullyearError {
+}
+.divider {
+}

@@ -20,32 +20,44 @@
 
 	<body>
 		<!-- Day DD Month MM Year YYYY -- years -- months -- days -->
-		<div class="mainContainer">
-			<div class="calcContainer">
+		<div class="mainContainer  ">
+			<div class="calcContainer flex column">
 				<!-- here goes what should be entered by user -->
-				<div class="inputsContainer">
-					<div class="inputBox">
-						<label for="inputDay"></label>
+				<div class="inputsContainer flex">
+					<div class="inputBox flex column">
+						<label for="inputDay ">DAY</label>
 						<input id="inputDay" type="number" name="date_day" />
 						<small class="dayError">This field is required</small>
 					</div>
-					<div class="inputBox">
-						<label for="inputMonth"></label>
+					<div class="inputBox flex column">
+						<label for="inputMonth">MONTH</label>
 						<input id="inputMonth" type="number" name="date_month" />
 						<small class="monthError">This field is required</small>
 					</div>
-					<div class="inputBox">
-						<label for="inputFullYear"></label>
+					<div class="inputBox flex column">
+						<label for="inputFullYear">YEAR</label>
 						<input id="inputFullYear" type="number" name="date_fullyear" />
 						<small class="fullyearError">This field is required</small>
 					</div>
 				</div>
 
 				<!-- this is a line-divider with a "submit" button -->
-				<div class="divider">
+				<div class="divider relative ">
 					<hr />
+					<button class="calcBtn absolute">
+						<svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+						<!-- <img src="./assets/images/icon-arrow.svg" alt="vector image if an arrow to press for starting calculation process" /> -->
+					</button>
 				</div>
+				<!-- this is the results section -->
+				<div class="resultsContainer">
+					<p class="resultsYears"><span id="outputYears">--</span>years</p>
+					<p class="resultsMonths"><span id="outputMonths">--</span>months</p>
+					<p class="resultsDays"><span id="outputDays">--</span>days</p>
 			</div>
 		</div>
 	</body>
 </html>
+
+
+<!-- <span class="letSpacing"></span> -->
