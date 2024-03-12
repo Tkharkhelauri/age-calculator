@@ -1,7 +1,8 @@
 :root {
 	--col-purple: #854dff;
 	--col-red: #ff5959;
-
+	--col-gray: #716f6f;
+	--col-gray-light: #f0f0f0;
 	--col-bg: #dcdcdc;
 	--col-black: #151515;
 	--col-white: #fff;
@@ -9,20 +10,77 @@
 	--ff-primary: 'Poppins';
 	--ff-fallback: sans-serif;
 
-	--rounded-xs: 0.4rem;
-	--rounded-sm: 1rem;
+	--fw-bold: 700;
+	--rounded-xs: 1.5rem;
+	--rounded-lg: 6.5rem;
 }
-
+.grid {
+	display: grid;
+}
+.flex {
+	display: flex;
+}
+.centered {
+	justify-content: center;
+}
+.column {
+	flex-direction: column;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
 body {
+	background-color: var(--col-gray-light);
+	width: 100%;
+	height: 100dvh;
 }
-.mainContainer {
+input {
+	display: block;
+	width: 100%;
+	height: 54px;
+	padding-left: 1rem;
+	font-weight: bold;
 }
+input::placeholder {
+	color: var(--col-black);
+}
+/* .mainContainer {
+	justify-content: center;
+} */
 .calcContainer {
+	background-color: var(--col-white);
+	border-radius: var(--rounded-xs);
+	border-bottom-right-radius: var(--rounded-lg);
+	width: 343px;
+	height: 486px;
+	padding-inline: 1.5rem;
+	padding-block: 3rem;
+	justify-content: center;
+	margin: auto;
+	margin-top: 88px;
+	gap: 3.5rem;
 }
 .inputsContainer {
+	/* justify-content: space-between; */
+	gap: 1rem;
+}
+small {
+	display: none;
 }
 .inputBox {
+	height: 54px;
 }
+.inputBox label {
+	color: var(--col-gray);
+	font-weight: var(--fw-bold);
+	font-size: 12px;
+	letter-spacing: 0.25rem;
+	margin-bottom: 0.5rem;
+}
+
 #inputDay {
 }
 #inputMonth {
@@ -36,4 +94,38 @@ body {
 .fullyearError {
 }
 .divider {
+	justify-content: center;
+}
+.calcBtn {
+	/* right: 39%;
+	top: -20px; */
+	background-color: var(--col-purple);
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: none;
+	width: 4rem;
+	height: 4rem;
+}
+.calcBtn svg {
+	width: 24px;
+	height: 24px;
+}
+.line {
+	border-bottom: #716f6f;
+}
+/* hr {
+	position: absolute;
+	border-bottom: none;
+	margin: 0;
+} */
+.resultsContainer p {
+	font-size: 48px;
+	font-style: italic;
+	font-weight: 900;
+	margin: 0;
+	line-height: 1.1;
+}
+.resultsContainer span {
+	color: var(--col-purple);
 }
