@@ -26,27 +26,29 @@
 				<div class="inputsContainer flex">
 					<div class="inputBox flex column">
 						<label for="inputDay ">DAY</label>
-						<input id="inputDay" placeholder="DD" type="number" name="date_day" />
+						<input id="inputDay" placeholder="DD" type="number" min="1" max="31" name="date_day" />
 						<small class="dayError">This field is required</small>
 					</div>
 					<div class="inputBox flex column">
 						<label for="inputMonth">MONTH</label>
-						<input id="inputMonth" placeholder="MM" type="number" name="date_month" />
+						<input id="inputMonth" placeholder="MM" type="number" min="1" max="12" name="date_month" />
 						<small class="monthError">This field is required</small>
 					</div>
 					<div class="inputBox flex column">
 						<label for="inputFullYear">YEAR</label>
-						<input id="inputFullYear" placeholder="YYYY" type="number" name="date_fullyear" />
+						<input id="inputFullYear" placeholder="YYYY" type="number" min="1" max="2024" name="date_fullyear" />
 						<small class="fullyearError">This field is required</small>
 					</div>
 				</div>
 
 				<!-- this is a line-divider with a "submit" button -->
-				<div class="divider flex ">
+
+				<div class="divider flex column">
 					<div class="line">
 
 					</div>
-					<div class="errow">
+
+					<div class="arrow absolute">
 						<button class="calcBtn flex ">
 							<svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="3"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
 							<!-- <img src="./assets/images/icon-arrow.svg" alt="vector image if an arrow to press for starting calculation process" /> -->
