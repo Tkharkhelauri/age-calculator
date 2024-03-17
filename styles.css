@@ -182,4 +182,8 @@ small {
 	}
 
 	/* active states */
+	input:focus {
+		border: 1px solid var(--col-purple);
+		/* outline: none; */
+	}
 }
