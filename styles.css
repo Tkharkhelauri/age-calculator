@@ -1,9 +1,9 @@
 :root {
 	--col-purple: #854dff;
 	--col-red: #ff5959;
-	--col-gray: #716f6f;
-	--col-gray-light: #f0f0f0;
-	--col-bg: #dcdcdc;
+	--col-l-gray: #f0f0f0;
+	--col-md-gray: #dcdcdc;
+	--col-dk-gray: #716f6f;
 	--col-black: #151515;
 	--col-white: #fff;
 
@@ -13,6 +13,7 @@
 	--fw-bold: 700;
 	--rounded-xs: 1.5rem;
 	--rounded-lg: 6.5rem;
+	--rounded-xl: 12rem;
 }
 .grid {
 	display: grid;
@@ -33,11 +34,13 @@
 	position: absolute;
 }
 body {
-	background-color: var(--col-gray-light);
+	background-color: var(--col-l-gray);
 	width: 100%;
 	height: 100dvh;
 }
 input {
+	border: 1px solid var(--col-md-gray);
+	border-radius: 10px;
 	display: block;
 	width: 100%;
 	height: 54px;
@@ -47,9 +50,7 @@ input {
 input::placeholder {
 	color: var(--col-black);
 }
-/* .mainContainer {
-	justify-content: center;
-} */
+
 .calcContainer {
 	background-color: var(--col-white);
 	border-radius: var(--rounded-xs);
@@ -71,16 +72,17 @@ small {
 	display: none;
 }
 .inputBox {
-	height: 54px;
+	height: 76px;
+	justify-content: space-between;
 }
 .inputBox label {
-	color: var(--col-gray);
+	color: var(--col-dk-gray);
 	font-weight: var(--fw-bold);
 	font-size: 12px;
 	letter-spacing: 0.25rem;
-	margin-bottom: 0.5rem;
+	/* margin-bottom: 0.5rem; */
 }
-
+/*
 #inputDay {
 }
 #inputMonth {
@@ -92,9 +94,11 @@ small {
 .monthError {
 }
 .fullyearError {
-}
+} */
 .divider {
 	justify-content: center;
+	margin-bottom: -15px;
+	margin-top: 15px;
 }
 .calcBtn {
 	/* right: 39%;
@@ -111,16 +115,9 @@ small {
 	width: 24px;
 	height: 24px;
 }
-.line {
-	border-bottom: #716f6f;
-}
-/* hr {
-	position: absolute;
-	border-bottom: none;
-	margin: 0;
-} */
+
 .resultsContainer p {
-	font-size: 48px;
+	font-size: 55px;
 	font-style: italic;
 	font-weight: 900;
 	margin: 0;
@@ -128,4 +125,61 @@ small {
 }
 .resultsContainer span {
 	color: var(--col-purple);
+}
+.line {
+	width: 100%;
+	border-bottom: 1px solid var(--col-md-gray);
+	height: 1px;
+}
+.arrow {
+	right: calc(50% - 32px);
+}
+@media (min-width: 900px) {
+	.calcContainer {
+		width: 840px;
+		height: auto;
+		padding: 3.5rem;
+		gap: 2rem;
+		border-bottom-right-radius: var(--rounded-xl);
+	}
+	.inputsContainer {
+		gap: 2rem;
+		justify-content: flex-start;
+	}
+	input {
+		height: 72px;
+		cursor: pointer;
+		font-size: 2rem;
+		padding-left: 1.5rem;
+	}
+	.inputBox {
+		width: 160px;
+		height: 101px;
+	}
+	.inputBox label {
+		font-size: 14px;
+	}
+	.resultsContainer p {
+		font-size: 104px;
+	}
+	input::placeholder {
+		color: var(--col-dk-gray);
+		font-size: 2rem;
+	}
+	.divider {
+		margin-bottom: 1rem;
+	}
+	.calcBtn {
+		width: 6rem;
+		height: 6rem;
+	}
+	.arrow {
+		right: calc(50% - 364px);
+	}
+	.calcBtn svg {
+		width: 44px;
+		height: 44px;
+	}
+
+	/* active states */
 }
