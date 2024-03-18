@@ -65,7 +65,7 @@ input::placeholder {
 	gap: 3.5rem;
 }
 .inputsContainer {
-	/* justify-content: space-between; */
+	justify-content: space-between;
 	gap: 1rem;
 }
 small {
@@ -82,27 +82,13 @@ small {
 	letter-spacing: 0.25rem;
 	/* margin-bottom: 0.5rem; */
 }
-/*
-#inputDay {
-}
-#inputMonth {
-}
-#inputFullYear {
-}
-.dayError {
-}
-.monthError {
-}
-.fullyearError {
-} */
+
 .divider {
 	justify-content: center;
 	margin-bottom: -15px;
 	margin-top: 15px;
 }
 .calcBtn {
-	/* right: 39%;
-	top: -20px; */
 	background-color: var(--col-purple);
 	align-items: center;
 	justify-content: center;
@@ -182,8 +168,12 @@ small {
 	}
 
 	/* active states */
-	input:focus {
+	input:hover {
 		border: 1px solid var(--col-purple);
-		/* outline: none; */
+		outline: none;
+	}
+	.calcBtn:hover {
+		cursor: pointer;
+		background-color: var(--col-black);
 	}
 }
